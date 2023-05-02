@@ -1,10 +1,10 @@
 class GreetingsController < ApplicationController
-    def show
-        greetings = Greeting.all
-        randomGreeting = greetings[rand(greetings.length - 1)]
+  def show
+    greetings = Greeting.all
+    random_greeting = greetings[rand(greetings.length - 1)]
 
-        return unless randomGreeting
+    return unless random_greeting
 
-        render json: { data: randomGreeting }
-    end
+    render json: { data: random_greeting }
+  end
 end
